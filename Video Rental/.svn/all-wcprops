@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/28/trunk/Video%20Rental
+END
+Drama.txt
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/15/trunk/Video%20Rental/Drama.txt
+END
+Romance.txt
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/15/trunk/Video%20Rental/Romance.txt
+END
+Customer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/27/trunk/Video%20Rental/Customer.cs
+END
+VideoStore.cs
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/28/trunk/Video%20Rental/VideoStore.cs
+END
+Main.cs
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/27/trunk/Video%20Rental/Main.cs
+END
+Video Rental.csproj.user
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/4/trunk/Video%20Rental/Video%20Rental.csproj.user
+END
+Horror.txt
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/15/trunk/Video%20Rental/Horror.txt
+END
+Rental.cs
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/19/trunk/Video%20Rental/Rental.cs
+END
+Video.cs
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/24/trunk/Video%20Rental/Video.cs
+END
+NewReleases.txt
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/15/trunk/Video%20Rental/NewReleases.txt
+END
+Video Rental.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/17/trunk/Video%20Rental/Video%20Rental.csproj
+END
+Comedy.txt
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/15/trunk/Video%20Rental/Comedy.txt
+END

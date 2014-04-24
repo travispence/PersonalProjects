@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Project1
+{
+    class Rental
+    {
+        List<Video> rentalList = new List<Video>();
+        private int dueDate;
+        private int rentalDate;
+        public Rental(List<Video> newRental, int due, int rent)
+        {
+            rentalList = newRental;
+            dueDate = due;
+            rentalDate = rent;
+        }
+
+        public List<Video> getVideos()
+        {
+            return rentalList;
+        }
+        public int getDueDate()
+        {
+            return dueDate;
+        }
+        public int getRentalDate()
+        {
+            return rentalDate;
+        }
+        public double getTotalCost()
+        {
+            double cost = 0;
+            foreach (Video video in rentalList)
+            {
+                cost += video.getCost();
+
+            }
+            return cost;
+        }
+
+    }
+}

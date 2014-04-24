@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/20/travis/res/layout
+END
+activity_main.xml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/20/travis/res/layout/activity_main.xml
+END
+listview_item_row.xml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/20/travis/res/layout/listview_item_row.xml
+END
+create_deck.xml
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/20/travis/res/layout/create_deck.xml
+END
+options.xml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/20/travis/res/layout/options.xml
+END
+word_list.xml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/20/travis/res/layout/word_list.xml
+END
+deck_list.xml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/20/travis/res/layout/deck_list.xml
+END
+list_item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/20/travis/res/layout/list_item.xml
+END

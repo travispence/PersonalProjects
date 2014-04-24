@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 23
+/svn/!svn/ver/20/travis
+END
+proguard-project.txt
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/20/travis/proguard-project.txt
+END
+AndroidManifest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/20/travis/AndroidManifest.xml
+END
+ic_launcher-web.png
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/20/travis/ic_launcher-web.png
+END
+project.properties
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/20/travis/project.properties
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/svn/!svn/ver/20/travis/.project
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/20/travis/.classpath
+END

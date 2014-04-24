@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name"> FR FunctionalFlashCards</string>
+    <string name="menu_settings">FR Settings</string>
+    <string name="create_deck">+</string>
+    <string name="create_deck_title">FR Create Deck</string>
+    <string name="deck_list_title">FR Current Decks</string>
+    <string name="view_deck_button">FR View Decks</string>
+    <string name="options_button">FR Options</string>
+    <string name="randomize">FR Enable Randomize</string>
+    <string name="options_title">FR Options</string>
+    <string name="list_of_words">FR Current Words</string>
+    <string name="flashcard_name">FR Flashcards</string>
+    <string name="current_word"></string>
+    <string name="word_list_title">FR Current List of Words</string>
+    <string name="search_button">+</string>
+    <string name ="save_button">FR Save</string>
+
+    <string-array name="spinner_items">
+        <item>FR English to Spanish</item>
+        <item>FR Spanish to English</item>
+        <item>FR English to French</item>
+        <item>FR French to English</item>
+    </string-array>
+
+</resources>

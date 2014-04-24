@@ -1,0 +1,11 @@
+K 10
+svn:ignore
+V 36
+CreateDeck.java
+DatabaseSearch.java
+
+K 14
+bugtraq:number
+V 4
+true
+END

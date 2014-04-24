@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FunctionalFlashCards</string>
+    <string name="menu_settings">Configuración</string>
+    <string name="create_deck">+</string>
+    <string name="create_deck_title">Crear una Baraja</string>
+    <string name="deck_list_title">Las Barajas Actuales</string>
+    <string name="view_deck_button">Ver Las Barajas</string>
+    <string name="options_button">Opciones</string>
+    <string name="randomize">Aleatorizar las Cartas</string>
+    <string name="options_title">Opciones</string>
+    <string name="list_of_words">Palabras</string>
+    <string name="flashcard_name">Cartas</string>
+    <string name="current_word"></string>
+    <string name="word_list_title">Lista de Palabras</string>
+    <string name="make_selection_title">Please choose a meaning</string>
+    <string name="delete">Suprimir</string>
+    <string name="update">Editar</string>
+    <string name="enter_word">Agregar un termíno en Español</string>
+    <string name="search_button">+</string>
+    <string name="save_button">Guardar</string>
+    <string name="downloading">Descargando...</string>
+	<string name="searching">Buscando traddución: </string>
+    <string-array name="spinner_items">
+        <item>Inglés a Español</item>
+        <item>Español a Inglés</item>
+        <item>Inglés a Francés</item>
+        <item>Francés a Inglés</item>
+    </string-array>
+
+</resources>

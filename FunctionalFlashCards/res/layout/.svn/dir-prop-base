@@ -1,0 +1,10 @@
+K 10
+svn:ignore
+V 16
+create_deck.xml
+
+K 14
+bugtraq:number
+V 4
+true
+END

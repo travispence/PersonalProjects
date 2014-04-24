@@ -1,0 +1,184 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+
+namespace Project1
+{
+    abstract class Customer
+    {
+        //Empty data structures.
+        protected String name;
+        protected String type;
+        protected int rentalPeriod;
+        protected int numOfRentals;
+        protected Tuple<int, int> rentalPeriodRange;
+        protected Tuple<int, int> numOfRentalsRange;
+
+        protected List<int> returnDate = new List<int>();
+        protected List<Video> movieList = new List<Video>();
+        protected List<Rental> currentRentals = new List<Rental>();
+
+        //Default Constructor
+        public Customer()
+        {
+            name = "Noname";
+            rentalPeriod = 0;
+            numOfRentals = 0;
+            rentalPeriodRange = new Tuple<int, int>(0, 0);
+            numOfRentalsRange = new Tuple<int, int>(0, 0);
+            type = "Default";
+        }
+
+
+        //Return Customer Name and type
+        public Tuple<String, String> getNameAndType()
+        {
+            return new Tuple<String, String>(name, type);
+        }
+
+        //Return Number of movies rented in that visit.
+        public int getNumOfRentals()
+        {
+            return numOfRentals;
+        }
+
+        //Verify if the store has any videos and if the customer that doesn't have 3 already.
+        public bool ableToRent(int storeInventory)
+        {
+            if ((movieList.Count < 3))
+            {
+                if (storeInventory > 0)
+                {
+                    return true;
+                }
+                return false;
+            }
+            else
+                return false;
+
+        }
+
+        //generate the number of days to rent for the videos on this trip.
+        public int getRentalPeriod()
+        {
+            return rentalPeriod;
+        }
+        public void decideRentalPeriod()
+        {
+
+            Random r = new Random();
+            rentalPeriod = r.Next(rentalPeriodRange.Item1, rentalPeriodRange.Item2);
+
+        }
+
+        //generate the number of videos to rent when invoked and set the member variable to that
+        //generated random
+        public void decideNumOfRentals()
+        {
+            Random r = new Random();
+            numOfRentals = r.Next(numOfRentalsRange.Item1, numOfRentalsRange.Item2);
+
+            if ((numOfRentals + movieList.Count) > 3)
+            {
+                numOfRentals = 3 - movieList.Count;
+            }
+
+
+        }
+        //Add movie to the Customers current rental list
+        public void rentMovie(Rental rental)
+        {
+            currentRentals.Add(rental);
+
+            foreach (Video v in rental.getVideos())
+            {
+                movieList.Add(v);
+            }
+
+        }
+
+
+        //Returns a list of videos that are due on that day
+        public void returnMovies(VideoStore store)
+        {
+           
+            foreach (Rental rental in currentRentals)
+            {
+                if (rental.getDueDate() == store.getDate())
+                {
+                    store.writeToLog(rental.getCustomerNameandType()+ ": RETURNED RENTAL: " + Environment.NewLine);
+                    store.writeToLog(rental.getRentalInfo());
+                    store.checkForReturnedRentals(rental);
+                    foreach (Video v in rental.getVideos())
+                    {
+                       movieList.Remove(v);
+                    }
+               
+                }
+
+
+            }
+        }
+
+    }
+
+    class BreezyCustomer : Customer
+    {
+
+        public BreezyCustomer(String n)
+        {
+            name = n;
+            type = "Breezy";
+            rentalPeriodRange = new Tuple<int, int>(1, 2);
+            numOfRentalsRange = new Tuple<int, int>(1, 2);
+        }
+
+    }
+
+    class HoarderCustomer : Customer
+    {
+
+        public HoarderCustomer(String n)
+        {
+            name = n;
+            type = "Hoarder";
+            rentalPeriodRange = new Tuple<int, int>(7, 7);
+            numOfRentalsRange = new Tuple<int, int>(3, 3);
+        }
+
+        //Overrides super method because the hoarderCustomer can only
+        //rent movies if there are at least 3 movies available.
+        new public bool  ableToRent(int storeInventory)
+        {
+            if ((movieList.Count < 3))
+            {
+                if (storeInventory >= 3)
+                {
+                    return true;
+                }
+                return false;
+            }
+            else
+                return false;
+
+        }
+    }
+
+    class RegularCustomer : Customer
+    {
+        public RegularCustomer(String n)
+        {
+            name = n;
+            type = "Regular";
+            rentalPeriodRange = new Tuple<int, int>(3, 5);
+            numOfRentalsRange = new Tuple<int, int>(1, 3);
+        }
+
+    }
+
+
+
+}
+

@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Diagnostics;
+
+namespace Project1
+{
+    public class Run
+    {
+        public Run()
+        {
+        }
+
+        public static void Main()
+        {
+
+            VideoStore Blockbuster = new VideoStore();
+            List<Customer> customers = Blockbuster.getCustomers();
+            for (int i = 1; i < 35; i++)
+            {
+                Debug.WriteLine("Movies in inventory on day: " + i + "--------------------------------");
+                Blockbuster.printMovies();
+                Blockbuster.simulateDay(i);
+
+                Debug.WriteLine("Movies in inventory on night: " + i + "-----------------------------");
+                Blockbuster.printMovies();
+                foreach (Customer customer in customers)
+                {
+                    customer.returnMovies(Blockbuster);
+                }
+
+            }
+        }
+    }
+            
+}

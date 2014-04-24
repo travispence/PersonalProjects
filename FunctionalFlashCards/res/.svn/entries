@@ -1,0 +1,61 @@
+10
+
+dir
+35
+https://f-f-c.googlecode.com/svn/res
+https://f-f-c.googlecode.com/svn
+
+
+
+2012-12-12T13:40:06.710306Z
+29
+tolson.louis@gmail.com
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ad2c4c60-7317-2ce2-c448-194b52e4d184
+
+drawable-hdpi
+dir
+
+drawable-ldpi
+dir
+
+drawable-mdpi
+dir
+
+drawable-xhdpi
+dir
+
+layout
+dir
+
+menu
+dir
+
+values
+dir
+
+values-es
+dir
+
+values-fr
+dir
+
+values-v11
+dir
+
+values-v14
+dir
+

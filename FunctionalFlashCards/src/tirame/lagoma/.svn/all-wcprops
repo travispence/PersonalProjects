@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/35/src/tirame/lagoma
+END
+RetrieveDefinition.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/13/src/tirame/lagoma/RetrieveDefinition.java
+END
+SimpleGestureFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/35/src/tirame/lagoma/SimpleGestureFilter.java
+END
+ViewDeck.java
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/34/src/tirame/lagoma/ViewDeck.java
+END
+ViewDeckList.java
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/34/src/tirame/lagoma/ViewDeckList.java
+END
+spanishDictionary.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/13/src/tirame/lagoma/spanishDictionary.java
+END
+Deck.java
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/27/src/tirame/lagoma/Deck.java
+END
+WordReferenceJSON.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/30/src/tirame/lagoma/WordReferenceJSON.java
+END
+MainActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/30/src/tirame/lagoma/MainActivity.java
+END
+DeckListAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/30/src/tirame/lagoma/DeckListAdapter.java
+END
+DeckAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/22/src/tirame/lagoma/DeckAdapter.java
+END
+DatabaseSearch.java
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/13/src/tirame/lagoma/DatabaseSearch.java
+END
+Flashcard.java
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/30/src/tirame/lagoma/Flashcard.java
+END
+GenericJSON.java
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/30/src/tirame/lagoma/GenericJSON.java
+END
+ViewCards.java
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/32/src/tirame/lagoma/ViewCards.java
+END
+OptionsMenu.java
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/28/src/tirame/lagoma/OptionsMenu.java
+END
+GenericListAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/27/src/tirame/lagoma/GenericListAdapter.java
+END
+Interface.java
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/30/src/tirame/lagoma/Interface.java
+END
+AppPreferences.java
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/28/src/tirame/lagoma/AppPreferences.java
+END

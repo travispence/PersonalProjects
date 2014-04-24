@@ -1,0 +1,216 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.IO;
+using System.Diagnostics;
+
+
+namespace Project1
+{
+
+    class VideoStore
+    {
+        double totalRevenue;
+        private List<Video> inventory = new List<Video>();
+        private List<Rental> activeRental = new List<Rental>();
+        private List<Customer> customerDatabase = new List<Customer>();
+        private int date;
+        List<Array> rentalList = new List<Array>();
+        LinkedList<String> rental = new LinkedList<String>();
+
+
+        public VideoStore()
+        {
+            totalRevenue = 0.0;
+            makeCustomers();
+            makeMovies();
+            date = 0;
+        }
+        public void simulateDay(int day)
+        {
+            setDay(day);
+            Random range = new Random();
+            int randRange = range.Next(1, 15);
+            Random r = new Random();
+            int randVal;
+            Customer person;
+
+            for (int i = 0; i < randRange; i++)
+            {
+                randVal = r.Next(10);
+                person = customerDatabase.ElementAt(randVal);
+                if (person.ableToRent(inventory.Count))
+                {
+                    checkout(person);
+                }
+            }
+
+        }
+
+        public void makeMovies()
+        {
+
+            Random random = new Random();
+            int maxValue = 5;
+            int r;
+            System.IO.StreamReader comedyFile = new System.IO.StreamReader("Comedy.txt");
+            System.IO.StreamReader newFile = new System.IO.StreamReader("NewReleases.txt");
+            System.IO.StreamReader horrorFile = new System.IO.StreamReader("Horror.txt");
+            System.IO.StreamReader dramaFile = new System.IO.StreamReader("Drama.txt");
+            System.IO.StreamReader romanceFile = new System.IO.StreamReader("Romance.txt");
+
+            for(int i = 0; i < 20; i++)
+            {
+                r = random.Next(maxValue);
+                Debug.WriteLine(r);
+                if (r == 0)
+                {
+                    Comedy newComedy = new Comedy(comedyFile.ReadLine());
+                    inventory.Add(newComedy);
+                }
+                else if (r == 1)
+                {
+                    Horror newHorror = new Horror(horrorFile.ReadLine());
+                    inventory.Add(newHorror);
+                }
+                else if (r == 2)
+                {
+                    New_Release newrelease = new New_Release(newFile.ReadLine());
+                    inventory.Add(newrelease);
+                }
+                else if (r == 3)
+                {
+                    Drama newDrama = new Drama(dramaFile.ReadLine());
+                    inventory.Add(newDrama);
+                }
+                else if (r == 4)
+                {
+                    Romance newRomance = new Romance(romanceFile.ReadLine());
+                    inventory.Add(newRomance);
+                }
+
+            }
+            comedyFile.Close();
+            newFile.Close();
+            horrorFile.Close();
+            dramaFile.Close();
+            romanceFile.Close();
+        }
+
+        public void makeCustomers()
+        {
+            Random random = new Random();
+            int maxValue = 3;
+            int r;
+            string[] names = {"Bob", "John", "Mary", "Suzanne", "Jerry", "Tom", "Leslie", "Ben", "Ron Swanson", "Tammy 2"};
+
+            for (int i = 0; i < 10; ++i)
+            {
+                r = random.Next(maxValue);
+
+
+                if (r == 0)
+                {
+                    BreezyCustomer cust = new BreezyCustomer(names[i]);
+                    customerDatabase.Add(cust);
+                }
+                else if (r == 1)
+                {
+                    HoarderCustomer cust = new HoarderCustomer(names[i]);
+                    customerDatabase.Add(cust);
+                }
+                else if (r == 2)
+                {
+                    RegularCustomer cust = new RegularCustomer(names[i]);
+                    customerDatabase.Add(cust);
+
+                }
+
+
+            }
+
+
+        }
+
+        public List<Customer> getCustomers()
+        {
+            return customerDatabase;
+        }
+        public Rental createRental(Customer person)
+        {
+            person.decideNumOfRentals();
+            int numOfRentals = person.getNumOfRentals();
+            person.decideRentalPeriod();
+            int rentalDays = person.getRentalPeriod();
+            List<Video> shoppingCart = new List<Video>();
+            if (inventory.Count() >= numOfRentals)
+            {
+                for (int i = 0; i < numOfRentals; i++)
+                {
+                    shoppingCart.Add(inventory.ElementAt(0));
+                    inventory.RemoveAt(0);
+                }
+            }
+            Rental rental = new Rental(shoppingCart, rentalDays + date, date);
+
+            return rental;
+
+        }
+        private void setDay(int day)
+        {
+            date = day;
+        }
+        public void checkout(Customer person)
+        {
+            Rental order = createRental(person);
+            totalRevenue += order.getTotalCost();
+            person.rentMovie(order);
+        }
+
+        public int getDate()
+        {
+            return date;
+        }
+
+        public void printMovies()
+        {
+            System.IO.StreamWriter fileWrite = new System.IO.StreamWriter("output.txt");
+            foreach (Video video in inventory)
+            {
+                fileWrite.WriteLine(video.getName());
+                Debug.WriteLine(video.getName());
+            }
+            fileWrite.Close();
+        }
+
+        public List<Video> getInventory()
+        {
+            return inventory;
+        }
+
+        public void returnRentals(Rental rental)
+        {
+            activeRental.Remove(rental);
+            List<Video> returnList = rental.getVideos();
+            foreach (Video video in returnList)
+            {
+                inventory.Add(video);
+            }
+        }
+
+        public void printInventory()
+        {
+            Console.WriteLine(inventory.Count);
+        }
+
+        public void printRentalList()
+        {
+            Console.WriteLine(rentalList);
+        }
+
+    }
+
+
+
+}
